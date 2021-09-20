@@ -9,7 +9,7 @@
 > > git 명령어 
 > >
 > > * git init : Local Repository 생성
-> > * git status : 현재 git으로 관리되고 있는 파일들의 상태 확인
+> > * git status : 현재s git으로 관리되고 있는 파일들의 상태 확인
 > > * git add [ 파일이름 ]  _ 추적되지 않는 파일과 추적하고 있는 파일 중 수정 파일을 올리는 것 ( git add .  모든파일을 올리는 것 )
 > > * git log : git의 commit 상태 보기
 > > * git diff : 두 commit 간의 차이 보기
