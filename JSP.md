@@ -10,13 +10,16 @@
 # Servlet 과 Jsp
 
 1. JSP와 Servlet은 자바 기반으로 만들어진 웹 프로그래밍 언어입니다.
+
 2. Servlet이 자바코드에 의존적이라면 JSP는 덜 의존적이라 프로그래밍하기가 더 쉽고 편합니다.
+
 3. JSP와 Servlet은 같은 처리구조를 가집니다.
+
 4. JSP는 실행시 Servlet으로 변환된다. 단 한 번만 서블릿으로 변경되면 코드를 수정하기 전까지 재 변환작업이 일어나지 않기 때문에 수행 속도 JSP나 서블릿 간에 별 차이가 없습니다.
 
 
 
-
+출처: https://nevertrustbrutus.tistory.com/71 [FU11M00N]
 
 ### JSP의 구성요소
 
