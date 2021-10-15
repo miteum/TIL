@@ -37,3 +37,30 @@
 
 
 이 에러는 
+
+
+
+
+
+
+
+10월 15일 
+
+![](Error%20Note.assets/unknown.png)
+
+
+
+이 에러는  178라인과 179라인을 바꿔줘야 했다.
+
+pstmt가 생성된 후, 넣어야하느데 먼저 넣고 시작했기 때문이다. 
+
+
+
+ 
+
+![unknowddn](Error%20Note.assets/unknowddn.png)
+
+
+
+이 에러는 
+
