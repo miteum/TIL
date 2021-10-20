@@ -138,3 +138,13 @@ public class HelloController {
 
 스프링부트는 톰캣서버에서 받아서 (hello네? ) get방식으로 넘어오면 url 매칭 되어서 컨트롤러에 있는 메서드가 실행이 되고 model이 넘어오면 키는 data,  리턴의 이름 hello (resources와 같은데 ) 랜더링을 하고 
 
+
+
+
+
+## 스프링 웹 개발 기초
+
+* 정적  컨텐츠
+* MVC와 템플릿 엔진  : JSP 
+* API
+
