@@ -44,3 +44,97 @@ DI  = Dependency Injection
 코드를 단순화 하고, 유지보수를 쉽게 할수 있음 
 
 Ioc =  
+
+
+
+
+
+10 / 19  인프런으로 시작한 강의 ( Intell.J 시작 )
+
+
+
+
+
+
+
+## 10 / 20 인프런으로 시작한 강의 
+
+Welcom Page 만들기 
+
+```
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<BODY>
+Hello
+<a href="/hello">hello</a>
+</BODY>
+
+```
+
+
+
+> resources > static > index.html 작성 
+>
+> 올려두면  Welcome page 기능을 제공 
+
+
+
+'HelloController'
+
+```
+package hello.hellospring.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
+@Controller
+public class HelloController {
+
+
+    @GetMapping("hello")
+    public String hello (Model model) {
+     model.addAttribute("data", "hello!!");
+     return "hello";
+
+    }
+}
+
+```
+
+
+
+' resources / templates / hello.html '
+
+```
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<BODY>
+<p th:text="'안녕하세요.' + ${data}" > 안녕하세요. 손님 </p>
+<a href="/hello">hello</a>
+</BODY>
+</html>
+```
+
+
+
+
+
+*동작 원리*
+
+웹브라우저 > localhost:8080/hello > 내장 톰캣 서버 > helloController (스프링 컨테이너) > return : hello. model(data: hello) > viewResolver > templates/hello.html ( Thymleaf 템플릿 엔진처리 ) > hello.html (변환후)
+
+* 컨트롤러에서 리턴값으로 문자를 반환하면 뷰 리졸버가 화면을 찾아서 처리 
+* 스프링 부트 템플릿엔지 기본 viewName매핑 ( 'resources : templates/' +(viewName+'.html'))
+
+스프링부트는 톰캣서버에서 받아서 (hello네? ) get방식으로 넘어오면 url 매칭 되어서 컨트롤러에 있는 메서드가 실행이 되고 model이 넘어오면 키는 data,  리턴의 이름 hello (resources와 같은데 ) 랜더링을 하고 
+
