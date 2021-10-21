@@ -148,3 +148,57 @@ public class HelloController {
 * MVC와 템플릿 엔진  : JSP 
 * API
 
+
+
+*정적컨텐츠 : 웹브라우저 
+
+웹브라우저 > localhost:808/hello-static > 내장 톰캣 서버 > 스프링 컨테이너에 없으니까 > 2안으로 static 폴더안에있는 hello-static.html을 찾아서 확인 후 보냄
+
+
+
+## 10월 21일
+
+
+
+*MVC = Model, View, Controller 
+
+view = 화면을 그리는데 모든 역량을 봐야함
+
+
+
+```
+Controller
+
+@Controller
+public class HelloController{ 
+
+@GetMapping("hello-mvc")
+public String helloMvc(@RequestParam("name") String name, Model model){
+model.addAttribute("name", name);
+ return "hello-template"; 
+}
+}
+```
+
+
+
+
+
+```
+View
+
+<!DOCTYPE HTML>
+<html xmlns:th="http:www.thymeleaf.org">
+<head>
+    <title>Hello</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<BODY>
+<p th:text="'hello' + ${name}" > hello! empty </p>
+<a href="/hello">hello</a>
+</BODY>
+
+```
+
+
+
